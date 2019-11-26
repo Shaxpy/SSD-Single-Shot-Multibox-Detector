@@ -24,7 +24,7 @@ def detect(frame, net, transform):
         while detections[0,i,j,0]>=0.6:
             pt=(detections[0,i,j,1:]*scale).numpy()
             cv2.rectangle(frame, (int(pt[0]),int(pt[1])),(int(pt[2]),int(pt[3])),(255,0,0),2)
-            
+            cv2.putText(frame,labelmap[i-1],(int(pt[0]),int(pt[1])),cv2.FONT_HERSHEY_SIMPLEX,2 ,(255,255,255),2,cv2.LINE_AA)
             j=j+1
             
     return frame
