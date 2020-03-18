@@ -33,7 +33,8 @@ transform = BaseTransform(net.size, (104/256.0,117/256.0,123/256.0))
 reader = imageio.get_reader('funny_dog.mp4')
 fps = reader.get_meta_data()['fps']
 writer=imageio.get_writer('output.mp4', fps=fps)
-  
+
+
 for i,frame in enumerate(reader):
      frame = detect(frame,net.eval(),transform)
      writer.append_data(frame)
