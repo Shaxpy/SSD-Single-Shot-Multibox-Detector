@@ -15,7 +15,7 @@ def detect(frame, net, transform):
     
     detections=y.data
     scale=torch.Tensor([width,height,width,height])
-    #detections=[batch ofinputs nd outputs,
+    #detections=[batch ofinputs nd outputs
     #number of classes(objects),occcurrence, tuple--{score,x0,y0,x1,y1}] 
     for i in range (detections.size(1)):
         j=0
