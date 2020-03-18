@@ -1,4 +1,4 @@
-# Object Detection
+
 
 # Importing the libraries
 import torch
